@@ -1,2 +1,3 @@
 @import url("global.css");
-@import url("index.header-navigation.css")
+@import url("global.header-navigation.css");
+@import url("index.hero.css");
