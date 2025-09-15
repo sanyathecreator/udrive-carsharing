@@ -1,0 +1,42 @@
+.workflow {
+    padding: 0 40px;
+}
+
+.workflow__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.workflow__steps-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.workflow__steps-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.workflow__steps-list-item-image {
+    height: 70px;
+    width: 70px;
+}
+
+.workflow__steps-list-item-title {
+    font-size: 25px;
+}
+
+.workflow__steps-list-item-text {
+    font-size: 17px;
+}
