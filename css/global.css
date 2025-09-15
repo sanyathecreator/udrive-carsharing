@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 *,
 *::after,
 *::before {
@@ -9,6 +9,8 @@
 
 :root {
     scroll-behavior: smooth;
+    --font-main: "Lato", sans-serif;
+    --font-accent: "Nunito Sans", sans-serif;
 }
 
 img {
@@ -24,16 +26,19 @@ img {
 h1 {
   color: #707070;
   font-size: 11px;
+  font-family: var(--font-main);
 }
 
 h2 {
   color: #333235;
   font-size: 34px;
+  font-family: var(--font-accent);
 }
 
 p {
   color: #5D5D5D;
   font-size: 19px;
+  font-family: var(--font-main);
 }
 
 hr {
