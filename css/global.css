@@ -20,3 +20,23 @@ img {
   max-width: 1200px;
   margin: auto;
 }
+
+h1 {
+  color: #707070;
+  font-size: 11px;
+}
+
+h2 {
+  color: #333235;
+  font-size: 34px;
+}
+
+p {
+  color: #5D5D5D;
+  font-size: 19px;
+}
+
+hr {
+  border: #F4581F solid 3px;
+  width: 3%;
+}
