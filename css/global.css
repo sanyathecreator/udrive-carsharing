@@ -9,6 +9,7 @@
 
 :root {
     scroll-behavior: smooth;
+    --text-color-special: #ffffff;
     --font-main: "Lato", sans-serif;
     --font-accent: "Nunito Sans", sans-serif;
 }
