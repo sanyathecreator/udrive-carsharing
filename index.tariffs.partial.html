@@ -1,20 +1,85 @@
-<!-- Tariffs Section -->
-<section class="tarrifs">
-  <div class="plans__payments container">
-    <h1 class="plans__payments-title">Tarrifs</h1>
-    <h2 class="plans__payments-subtitle">Most Flexible Plans</h2>
-    <p class="plans__payments-text">
-      We have developed three types of plans for your flexibility.
-    </p>
-    <!-- Tabs -->
-    <div class="tabs" role="tablist" aria-label="Tarrifs">
-      <button class="tab is active" data-tab="economy" role="tab">
-        Economy class
-      </button>
-      <button class="tab" data-tab="business" role="tab">Business class</button>
-      <button class="tab" data-tab="comfort" role="tab">Comfort class</button>
+<section class="tariffs" aria-labelledby="tariffs-title">
+  <div class="tariffs__banner banner-cars">
+    <!-- верхний оранжевый клин поверх карты -->
+    <div class="banner-top" aria-hidden="true"></div>
+
+    <!-- заголовок секции -->
+    <div class="tariffs__container">
+      <p class="tariffs__eyebrow">Tariffs</p>
+      <h2 id="tariffs-title" class="tariffs__title">Most Flexible Payment Plans</h2>
+      <hr class="tariffs__separator" />
+      <p class="tariffs__subtitle">
+        We have developed three types of plans for your flexibility.
+      </p>
     </div>
-    <!-- Tabs content -->
-    <div class="cards" id="cards-container"></div>
+
+    <!-- NAV + карточки внутри одного контейнера -->
+    <div class="tariffs__cards cards-switcher">
+      <nav class="cards-switcher__nav tabs" role="tablist" aria-label="Tariffs">
+        <button class="tabs__btn tabs__btn--active"
+                id="tab-economy" role="tab" aria-selected="true"
+                aria-controls="panel-economy" type="button">
+          Economy Class
+        </button>
+        <button class="tabs__btn"
+                id="tab-business" role="tab" aria-selected="false"
+                aria-controls="panel-business" type="button">
+          Business Class
+        </button>
+        <button class="tabs__btn"
+                id="tab-comfort" role="tab" aria-selected="false"
+                aria-controls="panel-comfort" type="button">
+          Comfort Class
+        </button>
+      </nav>
+
+      <div class="cards-switcher__panels" id="tariffs-cards">
+        <!-- Economy -->
+        <div class="cards cards__group" id="panel-economy" role="tabpanel" aria-labelledby="tab-economy">
+          <article class="card card--basic">
+            <h3 class="card__title">Basic</h3>
+            <p class="card__price">$1/min</p>
+            <p class="card__desc">Best for short trips around the city.</p>
+            <ul class="card__list">
+              <li>Mileage: 40 miles</li>
+              <li>Booking: free</li>
+              <li>Pick-up fee: $10</li>
+              <li>Extra time: $3/min</li>
+            </ul>
+            <a href="#" class="card__btn">Select Plan →</a>
+          </article>
+
+          <article class="card card--smart">
+            <h3 class="card__title">Smart</h3>
+            <p class="card__price">$12/hour</p>
+            <p class="card__desc">For everyday rides of any distance.</p>
+            <ul class="card__list">
+              <li>Mileage: 70 miles</li>
+              <li>Booking: free</li>
+              <li>Pick-up fee: $18</li>
+              <li>Extra time: $5/min</li>
+            </ul>
+            <a href="#" class="card__btn">Select Plan →</a>
+          </article>
+
+          <article class="card card--extra">
+            <h3 class="card__title">Extra</h3>
+            <p class="card__price">$45/day</p>
+            <p class="card__desc">Limitless usage during 24 hours.</p>
+            <ul class="card__list">
+              <li>Mileage: not limited</li>
+              <li>Booking: free</li>
+              <li>Pick-up fee: $20</li>
+              <li>Extra time: $7/min</li>
+            </ul>
+            <a href="#" class="card__btn">Select Plan →</a>
+          </article>
+        </div>
+
+        <!-- Business / Comfort панели, если нужно -->
+        <div class="cards cards__group" id="panel-business" role="tabpanel" aria-labelledby="tab-business" hidden></div>
+        <div class="cards cards__group" id="panel-comfort" role="tabpanel" aria-labelledby="tab-comfort" hidden></div>
+      </div>
+    </div>
   </div>
 </section>

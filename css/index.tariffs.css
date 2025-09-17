@@ -1,0 +1,138 @@
+/* ========== база секции и фоновые слои ========== */
+.tariffs { position: relative; }
+
+.banner-cars{
+  position: relative;                   /* ориентир для .banner-top */
+  min-height: 740px;
+  /* 100px (клин) + ~40px запас под заголовок */
+  padding-top: 140px;
+  background: #2b2c30 url("../img/tariffs/bg-cars.jpg")
+              top center / cover no-repeat;
+  color: var(--text-color-special, #fff);
+}
+
+.banner-top{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;                        /* подгони под реальную высоту клина */
+  background: url("../img/tariffs/top-block.webp")
+              top center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 2;                           /* поверх карты */
+}
+
+/* контент должен быть над клином */
+.tariffs__container,
+.tariffs__cards { position: relative; z-index: 3; }
+
+/* центральная ширина */
+.tariffs__container,
+.cards-switcher {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+/* ========== типографика шапки ========== */
+.tariffs__eyebrow{
+  font: 600 12px/1 var(--font-main, "Lato", sans-serif);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #a5a7ad;
+  margin: 0 0 12px;
+}
+
+.tariffs__title{
+  font-family: var(--font-accent, "Nunito Sans"), sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-color-special, #fff);
+}
+
+.tariffs__separator{
+  width: 56px; height: 4px;
+  margin: 18px auto 16px;
+  background: #F4581F; border: 0; border-radius: 2px;
+}
+
+.tariffs__subtitle{
+  font-family: var(--font-main, "Lato"), sans-serif;
+  font-weight: 300;
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #c9cbd1;
+  margin: 0;
+}
+
+/* ========== NAV (табы) ========== */
+.cards-switcher__nav{
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding-bottom: 12px;
+  margin: 24px 0 18px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.tabs__btn{
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  cursor: pointer;
+  font: 600 16px/1 var(--font-main, "Lato", sans-serif);
+  color: #a5a7ad;
+}
+
+.tabs__btn--active{
+  color: #fff;
+  position: relative;
+}
+
+.tabs__btn--active::after{
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -13px;
+  height: 3px;
+  background: #F4581F;
+  border-radius: 2px;
+}
+
+/* ========== сетка карточек ========== */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+@media (max-width: 1024px){
+  .cards{ grid-template-columns: repeat(2, minmax(280px,1fr)); }
+}
+
+@media (max-width: 640px){
+  .cards{ grid-template-columns: 1fr; }
+}
+
+/* ========== карточка тарифа ========== */
+.card{
+  position: relative;
+  border-radius: 24px;
+  padding: 28px 26px;
+  color: #fff;
+  overflow: hidden;
+  background: linear-gradient(135deg,#ff7a1e 0%, #ff5e1f 100%); /* фолбэк */
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* если есть изображения фона для карточек — подключи */
+.card--basic{ background-image: url("../img/tariffs/cards-orange.jpg"); background-size: cover; background-position: center; }
+.card--smart{ background-image: url("../img/tariffs/cards-orange.jpg"); background-size: cover; background-position: center; }
+.card--extra{ background-image: url("../img/tariffs/cards-orange.jpg"); background-size: cover; background-position: center; }
+
+/* типографика внутри карточек (схожа с макетом) */
+.card__title{ font: 700 14px/1 var(--font-main,"Lato"); opacity: .9; margin: 4px 0 12px; }
+.card__price{ font-family: var(--font-accent,"Nunito Sans"); font-weight: 900; font-size: 36px; margin: 0 0 12px; }
+.card__desc{ margin: 8px 0 16px; opacity: .9; }
+.card__list{ list-style: none; padding: 0; margin: 0 0 16px; }
+.card__list li{ display: flex; justify-content: space-between; gap: 16px; padding: 6px 0; }
+.card__btn{ display: inline-block; margin-top: 8px; color: #fff; font-weight: 700; text-decoration: none; }
