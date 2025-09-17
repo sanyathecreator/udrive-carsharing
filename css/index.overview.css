@@ -6,3 +6,48 @@ ul {
 ul li {
     list-style-image: url('../img/overview/checkmark.svg');
 }
+
+.overview {
+    padding: 0 24px;
+}
+
+.overview__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.overview__features-list-item-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.overview__text {
+    font-size: 17px;
+}
+
+.overview__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.overview__stats-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.overview__stats-item-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #6748CD;
+}
+
+.overview__stats-item-text {
+    font-size: 14px;
+    color: #707070;
+    font-weight: bold;
+}
