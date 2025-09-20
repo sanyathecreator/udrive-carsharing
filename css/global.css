@@ -9,6 +9,18 @@
 
 :root {
     scroll-behavior: smooth;
+
+    --title-font-size: 11px;
+    --subtitle-font-size: 34px;
+    --paragraph-font-size: 17px;
+    --paragraph-highlited-font-size: 19px;
+
+    --primary-title-color: #707070;
+    --primary-subtitle-color: #333235;
+    --primary-text-color: #5D5D5D;
+    --separator-color: #F4581F;
+    --accent-color: #6748CD;
+
     --text-color-special: #ffffff;
     --font-main: "Lato", sans-serif;
     --font-accent: "Nunito Sans", sans-serif;
@@ -25,24 +37,24 @@ img {
 }
 
 h1 {
-  color: #707070;
-  font-size: 11px;
+  color: var(--primary-title-color);
+  font-size: var(--title-font-size);
   font-family: var(--font-main);
 }
 
 h2 {
-  color: #333235;
-  font-size: 34px;
+  color: var(--primary-subtitle-color);
+  font-size: var(--subtitle-font-size);
   font-family: var(--font-accent);
 }
 
 p {
-  color: #5D5D5D;
-  font-size: 19px;
+  color: var(--primary-text-color);
+  font-size: var(--paragraph-font-size);
   font-family: var(--font-main);
 }
 
 hr {
-  border: #F4581F solid 3px;
+  border: var(--separator-color) solid 3px;
   width: 5%;
 }
